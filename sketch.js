@@ -2,7 +2,7 @@ let ball;
 let score = 0;
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(windowWidth, windowHeight);
   ball = new Ball();
 }
 
@@ -39,7 +39,7 @@ function mousePressed() {
 class Ball {
   constructor() {
     this.position = createVector(random(width), random(height));
-    this.radius = 40;
+    this.radius = 60;
     this.color = color(255, 0, 0); // Rojo inicial
   }
 
@@ -50,8 +50,8 @@ class Ball {
 
   update() {
     // Mover la bola aleatoriamente
-    this.position.x += random(-2, 2);
-    this.position.y += random(-2, 2);
+    this.position.x += random(-8, 8);
+    this.position.y += random(-8, 8);
 
     // Mantener dentro de los límites
     this.position.x = constrain(
