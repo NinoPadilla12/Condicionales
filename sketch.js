@@ -51,7 +51,7 @@ class Ball {
   update() {
     // Mover la bola aleatoriamente
     this.position.x += random(-8, 8);
-    this.position.y += random(-8, 8);
+    this.position.y += random(-15, 15);
 
     // Mantener dentro de los límites
     this.position.x = constrain(
